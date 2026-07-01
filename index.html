@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe Library — Exam Prep Kit</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (optional — used as placeholder icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+ <link rel="stylesheet" href="st.css">
+<style> 
+  
+  :root{
+      --bg:         #f4f4f4;
+      --surface:    #e6e6e6;
+      --line:       #cfcfcf;
+      --ink:        #6b6b6b;
+      --ink-strong: #333333;
+      --accent:     #bdbdbd;
+}
+
+
+body {
+      background: var(--bg);
+      color: var(--ink-strong);
+      font-family: system-ui, -apple-system, sans-serif;
+}
+</style>
+  
+</head>
+<body>
+
+<!-- ============================================================
+     01 — NAVBAR (full container wide, hover underline effect)
+     ============================================================ -->
+<section  id="block-navbar" >
+  <nav class="site-navbar">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <a href="#" class="d-flex align-items-center text-decoration-none">
+        <div class="box" style="width:40px; height:40px; min-height:0; margin-right:12px;"></div>
+        <span class="fw-bold" style="color: var(--ink-strong);">LOGO</span>
+      </a>
+
+      <!-- Links -->
+      <ul class="nav d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+
+      
+      <button class="btn-solid">Get Started</button>
+
+      
+      <button class="btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+        <i class="bi bi-list fs-3"></i>
+      </button>
+    </div>
+
+    
+    <div class="collapse d-lg-none" id="mobileNav">
+      <ul class="nav flex-column mt-3">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
+
+
+<section class="hero" data-block="hero" id="block-hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="line" style="width:40%; height:18px;"></div>
+        <h1 class="display-4 fw-bold">Hi I AM Rashel Mahmud Noyon</h1>
+        <p class="lead text-muted mt-3">
+          a web developer who builds clean, responsive, and user-friendly websites. I focus on simple design and efficient functionality to deliver real value.
+        </p>
+        <div class="d-flex gap-3 mt-4">
+          <button class="btn-solid">Primary Action</button>
+          <button class="btn-outline-dark-custom">Secondary</button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div  style="min-height: 360px;"><img src="media/Sub_profile.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 — ABOUT
+     ============================================================ -->
+<section class="py-5" data-block="about" id="block-about" style="background:#fafafa;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div ><img src="media/profile.jpg" alt=""></div>
+      </div>
+      <div class="col-lg-6">
+        <p class="text-uppercase text-muted small" style="letter-spacing:2px;">About Us</p>
+        <h2 class="fw-bold mb-4">A short story about the company</h2>
+        <p class="text-muted">
+         I am the founder of The Bot, a software company focused on building simple, modern, and user-friendly digital solutions.   
+        </p>
+        <p class="text-muted">
+We help turn ideas into practical results with clean design and reliable performance.        </p>
+        <div class="row mt-4">
+          <div class="col-4">
+            <h3 class="fw-bold mb-0">10+</h3>
+            <small class="text-muted">Years</small>
+          </div>
+          <div class="col-4">
+            <h3 class="fw-bold mb-0">500+</h3>
+            <small class="text-muted">Clients</small>
+          </div>
+          <div class="col-4">
+            <h3 class="fw-bold mb-0">99%</h3>
+            <small class="text-muted">Happy</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 — FEATURES (3-column icon grid)
+     ============================================================ -->
+<section class="py-5 bg-white" data-block="features" id="block-features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Features</p>
+      <h2 class="fw-bold">My Expertise</h2>
+    </div>
+    <div class="row g-4">
+      <!-- Repeat this col-md-4 block as needed -->
+      <div class="col-md-4">
+        <div class="p-4 text-center feature-card">
+          <div class="box mx-auto mb-3" style="width:64px; height:64px; min-height:0; border-radius:50%;">
+            <i class="bi bi-palette"></i>
+          </div>
+          <h5 class="fw-bold">Clean Design</h5>
+          <p class="text-muted">I create visually appealing and intuitive designs that prioritize user experience.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 text-center feature-card">
+          <div class="box mx-auto mb-3" style="width:64px; height:64px; min-height:0; border-radius:50%;">
+<i class="bi bi-phone"></i>          </div>
+          <h5 class="fw-bold">Responsive Development</h5>
+          <p class="text-muted">Building websites that work perfectly on all devices, from mobile to desktop.</p>
+        </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="p-4 text-center feature-card">
+          <div class="box mx-auto mb-3" style="width:64px; height:64px; min-height:0; border-radius:50%;">
+            <i class="bi bi-rocket"></i>
+          </div>
+          <h5 class="fw-bold">Efficient Functionality</h5>
+          <p class="text-muted">Delivering fast, reliable, and user-friendly web solutions with clean code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 — SERVICES (3 card grid with image)
+     ============================================================ -->
+<section class="py-5" data-block="services" id="block-services" style="background:#fafafa;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Services</p>
+      <h2 class="fw-bold">My Services</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-white border p-0 service-card" style="border-color: var(--line) !important;">
+          <div  style="min-height: 180px;"><img src="media/Frontend_Development.jpg" alt=""></div>
+          <div class="p-4">
+            <h5 class="fw-bold">Web Design</h5>
+            <p class="text-muted small">Crafting visually stunning and user-friendly website designs that engage visitors.</p>
+            <a href="#" class="text-decoration-none fw-bold" style="color: var(--ink-strong);">Learn more →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-white border p-0 service-card" style="border-color: var(--line) !important;">
+          <div  style="min-height: 180px;"><img src="media/web_developer.webp" alt=""></div>
+          <div class="p-4">
+            <h5 class="fw-bold">Frontend Development</h5>
+            <p class="text-muted small">Developing responsive and interactive web interfaces using modern technologies like HTML, CSS, and JavaScript.</p>
+            <a href="#" class="text-decoration-none fw-bold" style="color: var(--ink-strong);">Learn more →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-white border p-0 service-card" style="border-color: var(--line) !important;">
+          <div  style="min-height: 180px;"><img src="media/full.webp" alt=""></div>
+          <div class="p-4">
+            <h5 class="fw-bold">Full-Stack Solutions</h5>
+            <p class="text-muted small">Building complete web applications with both frontend and backend expertise for seamless functionality.</p>
+            <a href="#" class="text-decoration-none fw-bold" style="color: var(--ink-strong);">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 — GALLERY (6 image grid)
+     ============================================================ -->
+<section class="py-5 bg-white" data-block="gallery" id="block-gallery">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Gallery</p>
+      <h2 class="fw-bold">Our work</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+      <div class="col-6 col-md-4"><div class="img-ph" style="min-height:220px;"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 — PRICING (3 tiers, middle featured)
+     ============================================================ -->
+<section class="py-5" data-block="pricing" id="block-pricing" style="background:#fafafa;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Pricing</p>
+      <h2 class="fw-bold">Simple, honest pricing</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h5 class="fw-bold text-uppercase">Basic</h5>
+          <h2 class="fw-bold my-3">$9<small class="text-muted">/mo</small></h2>
+          <ul class="list-unstyled text-muted">
+            <li class="py-1">✓ Feature one</li>
+            <li class="py-1">✓ Feature two</li>
+            <li class="py-1">✓ Feature three</li>
+          </ul>
+          <button class="btn-outline-dark-custom w-100 mt-3">Choose Plan</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card featured text-center">
+          <small class="text-uppercase">Most Popular</small>
+          <h5 class="fw-bold text-uppercase mt-2">Pro</h5>
+          <h2 class="fw-bold my-3">$29<small>/mo</small></h2>
+          <ul class="list-unstyled">
+            <li class="py-1">✓ Everything in Basic</li>
+            <li class="py-1">✓ Feature four</li>
+            <li class="py-1">✓ Feature five</li>
+            <li class="py-1">✓ Feature six</li>
+          </ul>
+          <button class="btn-solid w-100 mt-3" style="background:#fff; color:#000;">Choose Plan</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="price-card text-center">
+          <h5 class="fw-bold text-uppercase">Enterprise</h5>
+          <h2 class="fw-bold my-3">$99<small class="text-muted">/mo</small></h2>
+          <ul class="list-unstyled text-muted">
+            <li class="py-1">✓ Everything in Pro</li>
+            <li class="py-1">✓ Custom integrations</li>
+            <li class="py-1">✓ Priority support</li>
+          </ul>
+          <button class="btn-outline-dark-custom w-100 mt-3">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     08 — TEAM
+     ============================================================ -->
+<section class="py-5 bg-white" data-block="team" id="block-team">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Team</p>
+      <h2 class="fw-bold">Meet the people behind it</h2>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3">
+        <div class="img-ph mb-3" style="min-height: 220px;"></div>
+        <h6 class="fw-bold mb-0">Name Surname</h6>
+        <small class="text-muted">Role / Title</small>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="img-ph mb-3" style="min-height: 220px;"></div>
+        <h6 class="fw-bold mb-0">Name Surname</h6>
+        <small class="text-muted">Role / Title</small>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="img-ph mb-3" style="min-height: 220px;"></div>
+        <h6 class="fw-bold mb-0">Name Surname</h6>
+        <small class="text-muted">Role / Title</small>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="img-ph mb-3" style="min-height: 220px;"></div>
+        <h6 class="fw-bold mb-0">Name Surname</h6>
+        <small class="text-muted">Role / Title</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Client 
+     ============================================================ -->
+<section class="py-5" data-block="testim" id="block-testim" style="background:#fafafa;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Testimonials</p>
+      <h2 class="fw-bold">What our clients say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="bg-white border p-4 h-100" style="border-color: var(--line) !important;">
+          <p class="text-muted">"Quote goes here. Keep it short, two or three lines at most. Make it specific."</p>
+          <div class="d-flex align-items-center mt-3">
+            <span class="avatar me-3" style="width:48px; height:48px;"></span>
+            <div>
+              <h6 class="fw-bold mb-0">Client Name</h6>
+              <small class="text-muted">Company</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white border p-4 h-100" style="border-color: var(--line) !important;">
+          <p class="text-muted">"Quote goes here. Keep it short, two or three lines at most. Make it specific."</p>
+          <div class="d-flex align-items-center mt-3">
+            <span class="avatar me-3" style="width:48px; height:48px;"></span>
+            <div>
+              <h6 class="fw-bold mb-0">Client Name</h6>
+              <small class="text-muted">Company</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-white border p-4 h-100" style="border-color: var(--line) !important;">
+          <p class="text-muted">"Quote goes here. Keep it short, two or three lines at most. Make it specific."</p>
+          <div class="d-flex align-items-center mt-3">
+            <span class="avatar me-3" style="width:48px; height:48px;"></span>
+            <div>
+              <h6 class="fw-bold mb-0">Client Name</h6>
+              <small class="text-muted">Company</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10 — FAQ (Bootstrap accordion)
+     ============================================================ -->
+<section class="py-5 bg-white" data-block="faq" id="block-faq">
+  <div class="container" style="max-width: 800px;">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">FAQ</p>
+      <h2 class="fw-bold">Frequently asked questions</h2>
+    </div>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Question one goes here?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">Answer to the first question. Keep it clear and short.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Question two goes here?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">Answer to the second question.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Question three goes here?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">Answer to the third question.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11 — CTA BANNER
+     ============================================================ -->
+<section class="py-5" data-block="cta" id="block-cta" style="background: var(--ink-strong); color:#fff;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Ready to get started?</h2>
+    <p class="lead mb-4">One strong sentence that pushes the visitor to act now.</p>
+    <button class="btn-solid" style="background:#fff; color:#000;">Start Your Free Trial</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     12 — CONTACT FORM + SUCCESS POPUP ⭐ EXAM REQUIREMENT
+     ============================================================ -->
+<section class="py-5 bg-white" data-block="contact" id="block-contact">
+  <div class="container" style="max-width: 700px;">
+    <div class="text-center mb-5">
+      <p class="text-uppercase text-muted small" style="letter-spacing:2px;">Contact</p>
+      <h2 class="fw-bold">Get in touch</h2>
+      <p class="text-muted">Fill out the form and we'll get back to you within 24 hours.</p>
+    </div>
+
+    <!-- IMPORTANT: id="contactForm" is wired to the JS popup below -->
+    <form id="contactForm" novalidate>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="5" required></textarea>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn-solid px-5">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Bootstrap modal — the success popup -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <!-- Green checkmark circle -->
+        <div class="mx-auto mb-3 d-flex align-items-center justify-content-center"
+             style="width:80px; height:80px; background:#d4edda; border-radius:50%;">
+          <i class="bi bi-check-lg" style="font-size: 3rem; color:#28a745;"></i>
+        </div>
+        <h4 class="fw-bold">Message Sent Successfully!</h4>
+        <p class="text-muted">Thank you for reaching out. We'll get back to you shortly.</p>
+        <button type="button" class="btn-solid mt-3" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     13 — FOOTER (with live date & time) ⭐ EXAM REQUIREMENT
+     ============================================================ -->
+<footer class="site-footer" data-block="footer" id="block-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="" alt="">
+        <h5 class="fw-bold text-white">LOGO</h5>
+        <p class="small">Short tagline or company description in one or two lines.</p>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6 class="text-white">Company</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6 class="text-white">Support</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white">Stay updated</h6>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Your email">
+          <button class="btn-solid" style="border-radius:0;">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar: copyright + LIVE DATE & TIME -->
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between">
+      <div>© 2026 Your Company. All rights reserved.</div>
+      <div>
+        <span id="liveDateTime">Loading date &amp; time...</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOOTSTRAP 5 JS + CUSTOM SCRIPTS
+     ============================================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// CONTACT FORM
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if (!this.checkValidity()) {
+    this.reportValidity();
+    return;
+  }
+
+  new bootstrap.Modal(document.getElementById('successModal')).show();
+  this.reset();
+});
+
+// LIVE DATE & TIME
+function updateDateTime() {
+  document.getElementById('liveDateTime').textContent =
+    new Date().toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>
+

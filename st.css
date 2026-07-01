@@ -1,0 +1,208 @@
+:root {
+  --bg: #f4f4f4;
+  --surface: #e6e6e6;
+  --line: #cfcfcf;
+  --ink: #6b6b6b;
+  --ink-strong: #333333;
+  --accent: #bdbdbd;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink-strong);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Responsive images that fit their parent containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feature cards styling */
+.feature-card {
+  border: 2px solid var(--line);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: var(--surface);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Service cards styling with animation */
+.service-card {
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover .img-ph {
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+}
+.img-ph {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+.img-ph::after {
+  content: "🖼  Image";
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.img-ph.blank::after {
+  content: "";
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+.line {
+  background: var(--line);
+  height: 12px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.line .short {
+  width: 60%;
+}
+.line .mid {
+  width: 80%;
+}
+.btn-solid {
+  background: var(--ink-strong);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.btn-solid:hover {
+  background: #000;
+  color: #fff;
+}
+.btn-outline-dark-custom {
+  background: transparent;
+  color: var(--ink-strong);
+  border: 1px solid var(--ink-strong);
+  padding: 10px 24px;
+  border-radius: 2px;
+}
+
+.site-navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 32px;
+  width: 100%;
+}
+.site-navbar .nav-link {
+  color: var(--ink-strong);
+  padding: 8px 18px;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.site-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--ink-strong);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.site-navbar .nav-link:hover::after {
+  transform: scaleX(1);
+}
+.site-navbar .nav-link:hover {
+  color: #000;
+}
+
+.hero {
+  padding: 80px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+BLOCK — FOOTER .site-footer {
+  background: #2b2b2b;
+  color: #ccc;
+  padding: 48px 0 20px;
+}
+.site-footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #fff;
+}
+.site-footer .footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 32px;
+  padding-top: 16px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================BLOCK — PRICING
+       ========================================================== */
+.price-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 32px 24px;
+  height: 100%;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.price-card.featured {
+  background: var(--ink-strong);
+  color: #fff;
+}
+
+section[data-block] {
+  scroll-margin-top: 80px;
+}
